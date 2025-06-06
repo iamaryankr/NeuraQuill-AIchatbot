@@ -20,13 +20,13 @@ app.use('/api/chat', require('./routes/chat'));        // message routes
 app.use('/api/chat', require('./routes/chatThreads')); // thread routes
 
 // In “production”, serve frontend
-if (process.env.NODE_ENV === 'production') {
-  const distPath = path.join(__dirname, '../frontend/dist');
-  app.use(express.static(distPath));
-  app.get(/(.*)/, (req, res) => {
-    res.sendFile(path.join(distPath, 'index.html'));
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+//   const distPath = path.join(__dirname, '../frontend/dist');
+//   app.use(express.static(distPath));
+//   app.get(/(.*)/, (req, res) => {
+//     res.sendFile(path.join(distPath, 'index.html'));
+//   });
+// }
 
 // 404 fallback — MUST come last
 app.use((req, res) => {
