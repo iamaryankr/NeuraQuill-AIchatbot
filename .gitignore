@@ -1,0 +1,10 @@
+# Node artifacts
+node_modules/
+.env
+
+# Vite build outputs
+/frontend/dist
+
+# VS Code / system files
+.DS_Store
+*.log
